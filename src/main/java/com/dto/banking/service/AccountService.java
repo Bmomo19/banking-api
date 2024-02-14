@@ -1,9 +1,22 @@
 package com.dto.banking.service;
 
 import com.dto.banking.dto.AccountDto;
-import com.dto.banking.entity.Account;
+
+import java.util.List;
 
 public interface AccountService {
 
-    AccountDto createAccount(Account account);
+
+    AccountDto createAccount(AccountDto accountDto);
+
+    AccountDto getAccountById(Long id);
+
+    AccountDto deposit (Long id, Double amount);
+
+    AccountDto withdraw(Long id, Double amount);
+
+    List<AccountDto> getAllAccounts();
+
+    void deleteAccount(Long id);
+
 }

@@ -6,22 +6,20 @@ import com.dto.banking.entity.Account;
 public class AccountMapper {
 
     public static Account mapToAccount(AccountDto accountDto) {
-        Account account = new Account(
+        return new Account(
             accountDto.getId(),
             accountDto.getAccountHolderName(),
             accountDto.getAccountNumber(),
             accountDto.getBalance()
         );
-        return account;
     }
 
     public static AccountDto mapToAccountDto(Account account) {
-        AccountDto accountDto = new AccountDto(
+        return new AccountDto(
             account.getId(),
             account.getAccountHolderName(),
             account.getAccountNumber(),
             account.getBalance()
         );
-        return accountDto;
     }
 }
